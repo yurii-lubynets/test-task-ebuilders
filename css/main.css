@@ -1,0 +1,164 @@
+/* General styles */
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Lato', sans-serif;
+    --main-color: #01114d;
+}
+.item-img {
+    position: absolute;
+    display: inline-block;
+    top: 20px;
+    bottom: 20px;
+    left: 20px;
+    width: 50%;
+    z-index: 0;
+}
+.item-img-1 {
+    background: url(http://picture-cdn.wheretoget.it/miypkt-l-610x610-bag-beach-beachbag-skater+girl-bags+purses-flowers.jpg) no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.item-img-2 {
+    background: url(https://thumbs.dreamstime.com/b/portrait-sexy-girl-beach-bag-beach-beautiful-young-woman-brunette-long-straight-hair-blue-shorts-wearing-sun-52551139.jpg) no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.item-products {
+    width: 230px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    background: linear-gradient(to right, var(--main-color) 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+}
+.animate-bg {
+    overflow-y: auto;
+    background-position: left bottom;
+}
+.item-wrapper {
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-100%);
+    transition: all .5s ease-out;
+}
+.animate-move-down {
+    transform: translateY(0);
+}
+.product-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 190px;
+    text-align: center;
+    padding: 20px 20px 0;
+    transition: transform 0.5s ease;
+}
+.product-container:hover {
+    transform: scale(1.1);
+}
+.product-container p {
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 0;
+    color: #fff;
+    font-size: 12px;
+}
+.product-container img {
+    width: 100%;
+    height: auto;
+}
+.product-title {
+    text-transform: uppercase;
+}
+.item-description {
+    position: absolute;
+    z-index: 1;
+    width: 250px;
+    margin: auto;
+    top: 30%;
+    left: 54%;
+}
+.item-title {
+    margin-top: 0;
+    margin-left: -100px;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    color: var(--main-color);
+    font-weight: normal;
+    text-align: justify;
+    -moz-text-align-last: justify;
+    text-align-last: justify;
+}
+.item-text {
+    margin-bottom: 0;
+    text-transform: capitalize;
+    color: var(--main-color);
+}
+.item-text:last-child {
+    text-transform: uppercase;
+}
+.item-text:last-child span {
+    padding-bottom: 10px;
+    border-bottom: 5px solid var(--main-color);
+}
+
+/*Styles for the open/close button with animation*/
+.item-btn-wrap {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    background-color: var(--main-color);
+}
+.item-btn {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40px, -40px);
+    transform-origin: 50% 50%;
+}
+.item-btn:hover {
+    cursor: pointer;
+    transition: 0.3s all;
+}
+.cross {
+    width: 4px;
+    height: 50px;
+    background-color: white;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    transform-origin: 50% 50%;
+}
+#twoC {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+.crossToggleC {
+    transform: translate(-50%, -50%) rotate(135deg);
+    transition: 0.4s all;
+}
+@media (max-width: 992px) {
+    .item-img {
+        width: auto;
+        right: 20px;
+    }
+    .item-description {
+        top: 20%;
+        left: 0;
+        right: 0;
+    }
+    .item-title {
+        text-align: center;
+        margin-left: 0;
+        letter-spacing: normal;
+    }
+}
