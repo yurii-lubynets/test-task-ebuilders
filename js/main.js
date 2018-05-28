@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     
     var timeToSlide = 5000;
     var timeSlider;
-    var timeToChange = 20000;
+    var timeToChange = 2000;
     var timeChange;
     
     //logic for slider
