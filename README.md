@@ -1,6 +1,4 @@
-# Project Title
-
-Test task ebuilders
+# Test task ebuilders
 
 ## Getting Started
 
